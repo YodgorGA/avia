@@ -1,0 +1,70 @@
+@mixin monthButton ($justCon,$padding) {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: $justCon;
+    align-items: center;
+    border-radius: 20px;
+    padding-left: $padding;
+    box-shadow: 0px 0px 10px rgba(112, 121, 153, 0.3);
+    cursor:pointer;
+}
+
+@mixin monthButtonWrapper($translateX){
+    transform: translateX($translateX);
+    &:hover{
+        box-shadow: 0px 0px 10px $primaryColor;
+    }
+    border-radius: 20px;
+}
+
+@mixin monthArrow($scale1,$scale2){
+    width: 10px;
+    height: 10px;
+    transform: scale($scale1,$scale2);
+    background-image: url('../../public/images/arrow.svg');
+    background-repeat: no-repeat;
+}
+
+@mixin calendarButton($textColor:#cecfd2,$backgroundColor:#f7f8f9){
+    width: 322px;
+    height: 36px;
+    font-weight: 400;
+    font-family: 'Roboto';
+    font-size: 16px;
+    color:$textColor;
+    background-color: $backgroundColor;
+    border: 1px solid $backgroundColor;
+    border-radius: 5px;
+}
+
+@mixin calendarDay($color:#bfc1c4){
+    font-family: 'Roboto';
+    font-size: 12px;
+    line-height: 171%;
+    font-weight: 500;
+    color: $color;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #fff;
+}
+
+@mixin dropdownContainer ($left){
+    position: absolute;
+    top:45px;
+    left: $left;
+    width: 194px;
+    max-height: 154px;
+    overflow: hidden;
+    padding: 0px 0px 5px 12px;
+    line-height: 121%;
+    background-color: #fff;
+    border-radius:10px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 14px;
+    border: 1px solid #5C87DB;
+}

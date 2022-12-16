@@ -1,0 +1,13 @@
+@use 'colors.scss';
+@use 'minimize.scss';
+@use 'fonts.scss';
+@use 'avia.scss';
+@use 'info.scss';
+@use 'calendar.scss';
+@use 'mixins.scss';
+.root{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
